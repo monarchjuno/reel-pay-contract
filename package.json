@@ -1,0 +1,23 @@
+{
+  "name": "@reel-pay/contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Reel Pay DApp",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx hardhat compile",
+    "dev": "npx hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "npx hardhat run deploy/01-deploy-counter.ts --network sepolia",
+    "deploy:reelpay:local": "npx hardhat run deploy/02-deploy-reelpay.ts --network localhost",
+    "deploy:reelpay:sepolia": "npx hardhat run deploy/02-deploy-reelpay.ts --network sepolia",
+    "lint": "echo 'Linting contracts...'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "hardhat": "^2.17.1",
+    "typescript": "^5.1.6",
+    "@types/node": "^20.4.5",
+    "dotenv": "^16.3.1"
+  }
+}
